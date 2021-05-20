@@ -21,6 +21,7 @@
 	<div align="center" style="max-width: 50%;color: white;background-color: red;align-items: center; font-family: times in roman; border-radius: 30px;border: 1px solid black;">
 		<span style="font-size: 40px">Welcome To FoodShala</span></div>
 	</div>
+	<br>
 <div align="right" id="out" style="display:  ">
 	<form action="logout.php" method="get" id="logoutf">
 					<input type="submit" name="logoutf" hidden=""></form>
