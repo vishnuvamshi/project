@@ -99,12 +99,12 @@
 </script>
 	<?php
 	if($_SERVER["REQUEST_METHOD"]=="POST"){
-	$s="localhost:3306";
-	$un="root";
-	$pw="";
-	$db="MyDB";
-	$conn=mysqli_connect($s,$un,$pw,$db);
-	if(!$conn)
+	$s="remotemysql.com:3306";
+	$un="0Qc34rspqi";
+	$pw="dGdmOsAXAn";
+	$db="0Qc34rspqi";
+	$con=mysqli_connect($s,$un,$pw,$db);
+	if(!$con)
 		die("error".mysqli_connect_error());
 	// else
 	// 	echo "succes";
@@ -118,13 +118,13 @@
 	// }
 
 		$sql="INSERT INTO customer (name,pwd,preference,mob) VALUES ('$ln','$password','$preference','$mobile')";
-		if(mysqli_query($conn,$sql)){
+		if(mysqli_query($con,$sql)){
 			echo ("<script>alert('Registration completed');location.href='menu.php';</script>");
 		}
 		else
 		{	
 			$sql1="select * from customer where mob='$mobile'";
-			$res1=$conn->query($sql1);
+			$res1=$con->query($sql1);
 			if($res1->num_rows>0)
 			{
 				echo ("<script>alert('This mobile number already has an account');location.href='register.php';</script>");
