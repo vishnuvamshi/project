@@ -113,7 +113,7 @@
 			</span>
 		</abbr></th></tr></table></marquee>
 	</td></tr></table>
-	<div align="center" id="logged"><a href="login.php"><button name="button" type="button" style="background-color: gray;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigsp2g(this)" onmouseleave="bigout2g(this)" onclick="alert('Please login to order Food')">Order</button></a></div>
+	<div align="center" id="logged"><a href="login.php"><button name="button" type="button" style="background-color: pink;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigsp2g(this)" onmouseleave="bigout2g(this)" onclick="alert('Please login to order Food')">Order</button></a></div>
 
 	<h3 align="center" style="padding-top: 0px;font-size: 35px;color: red;background: white"><u>Available Restaurants and Items</u></h3>
 <?php  
@@ -342,7 +342,7 @@
  	{	echo "<script>document.getElementById('logged').style.display='none';</script>";
 	if($_SESSION["type"]=="customer")
 	{echo '<br><div align="center">
-	<button name="button" type="submit" style="background-color: gray;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigsp2g(this)" onmouseleave="bigout2g(this)" onclick="">Order</button>
+	<button name="button" type="submit" style="background-color: pink;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigsp2g(this)" onmouseleave="bigout2g(this)" onclick="">Order</button>
 	</div>
 <script type="text/javascript">
 	function order() {
@@ -351,7 +351,7 @@
 </script>';}
 	else{
 		echo '<div align="center">
-	<button name="button" type="button" style="background-color: gray;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigsp2g(this)" onmouseleave="bigout2g(this)" onclick="order1()")">Order</button>
+	<button name="button" type="button" style="background-color: pink;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigsp2g(this)" onmouseleave="bigout2g(this)" onclick="order1()")">Order</button>
 	</div></div>
 	<script type="text/javascript">
 	function order1() {
