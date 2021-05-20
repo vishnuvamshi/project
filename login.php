@@ -129,7 +129,7 @@
 			<td height="100" align="">
 					<input type="submit" value="Submit" id="sub" name="submitt" style="background-color:yellow;font-color:black ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigout2b(this)" onmouseleave="bigsp2b(this)">
 			</td><td align="center" colspan="2">
-							<button name="button" type="button" style="background-color: gray;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onclick="hide()" onmouseover="bigsp2g(this)" onmouseleave="bigout2g(this)">Sign up
+							<button name="button" type="button" style="background-color: pink;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onclick="hide()" onmouseover="bigsp2g(this)" onmouseleave="bigout2g(this)">Sign up
 							</button></td></tr>
 		<script type="text/javascript">
 					var c=0;
