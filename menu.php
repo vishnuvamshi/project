@@ -64,51 +64,51 @@
 	
 <br><br>
 	<h3 align="center" style="padding-top: 0px;font-size: 40px;color: darkblue"><u>Tasty Food</u></h3>
-	<table style="max-width:100%; min-width: 100%%; width: 100%"><tr width="100%"><td height="225">
-	
-		<abbr title="Dosa"><table><tr><th width="">
+<table style=""><tr><td height="225">
+	<marquee style="font-size: 25px;" scrollamount="10" behavior="alternate" direction="left" onmouseover="this.stop()" onmouseout="this.start()">
+		<abbr title="Dosa"><table><tr><th width="440px">
 			<span >
 				<a href="dosa.jpg">
-					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="dosa.jpg" height="200px" width="" alt="dosa" style="border-radius: 20%;">
+					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="dosa.jpg" height="200px" width="430px" alt="dosa" style="border-radius: 20%;">
 				</a>
 			</span>
-		</abbr></th><th width="">
+		</abbr></th><th width="440px">
 		<abbr title="Biryani">
 			<span >
 				<a href="biryani.jpg">
-					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="biryani.jpg" height="200px" width="" alt="biryani" style="border-radius: 20%">
+					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="biryani.jpg" height="200px" width="430px" alt="biryani" style="border-radius: 20%">
 				</a>
 			</span><br>
-		</abbr></th><th width="">
+		</abbr></th><th width="440px">
 		<abbr title="Fish Fry">
 			<span >
 				<a href="fish.jpg">
-					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="fish.jpg" height="200px" width="" alt="fishfry" style="border-radius: 20%">
+					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="fish.jpg" height="200px" width="430px" alt="fishfry" style="border-radius: 20%">
 				</a>
 			</span><br>
 		</abbr></th>
-	</tr><tr><th width="">
+	<th width="440px">
 		<abbr title="Burger">
 			<span >
 				<a href="burger.jpg">
-					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="burger.jpg" height="200px" width="" alt="Burger" style="border-radius: 20%">
+					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="burger.jpg" height="200px" width="430px" alt="Burger" style="border-radius: 20%">
 				</a>
 			</span>
-		</abbr></th><th width="">
+		</abbr></th><th width="440px">
 		<abbr title="Samosa">
 			<span >
 				<a href="samosa.jpg">
-					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="samosa.jpg" height="200px" width="" alt="Samosa" style="border-radius: 20%;background: fixed;">
+					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="samosa.jpg" height="200px" width="430px" alt="Samosa" style="border-radius: 20%;background: fixed;">
 				</a>
 			</span>
-		</abbr></th><th width="">
+		</abbr></th><th width="440px">
 		<abbr title="pizza">
 			<span >
 				<a href="pizza.jpg">
-					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="pizza.jpg" height="200px" width="" alt="Pizza" style="border-radius: 20%;background: fixed;">
+					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="pizza.jpg" height="200px" width="430px" alt="Pizza" style="border-radius: 20%;background: fixed;">
 				</a>
 			</span>
-		</abbr></th></tr></table>
+		</abbr></th></tr></table></marquee>
 	</td></tr></table>
 	<div align="center" id="logged"><a href="login.php"><button name="button" type="button" style="background-color: gray;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigsp2g(this)" onmouseleave="bigout2g(this)" onclick="alert('Please login to order Food')">Order</button></a></div>
 
