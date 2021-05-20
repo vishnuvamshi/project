@@ -32,8 +32,8 @@
 			<?php
 				echo('<div align="center">
 					<table cellpadding="7" style="background-color: yellow;align-items: center;color:blue; font-family: times new roman; border-radius: 30px;font-size:23px;min-width:50%;border: 5px solid black;display:;max-width:95%" border="0" >
-		<tr><th align="center" style="font-size:30px;background-color:cyan; width:;border-radius:0px;color:black">Customer Name</th>
-		<th align="center" style="font-size:30px;background-color:cyan; width:;border-radius:0px;color:black">Ordered items
+		<tr><th align="center" style="font-size:30px;background-color:cyan; width:;border-radius:30px;color:black">Customer Name</th>
+		<th align="center" style="font-size:30px;background-color:cyan; width:;border-radius:30px;color:black">Ordered items
 		</th>
 		</tr>
 					');
@@ -53,7 +53,7 @@
 		{
 			while($row=$res->fetch_assoc())
 			{
-				echo '<tr><th align="center" style="font-size:20px;background-color:gold; width:;border-radius:0px;">'.ucfirst($row["name"]).'</th><th align="center" style="font-size:20px;background-color:gold; width:;border-radius:0px;">'.$row["food"].'</th></tr>';
+				echo '<tr><th align="center" style="font-size:20px;background-color:gold; width:;border-radius:30px;">'.ucfirst($row["name"]).'</th><th align="center" style="font-size:20px;background-color:gold; width:;border-radius:30px;">'.$row["food"].'</th></tr>';
 			}
 		}
 		else
