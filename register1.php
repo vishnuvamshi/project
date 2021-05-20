@@ -94,10 +94,10 @@
 </script>
 	<?php
 	if($_SERVER["REQUEST_METHOD"]=="POST"){
-	$s="localhost:3306";
-	$un="root";
-	$pw="";
-	$db="MyDB";
+	$s="remotemysql.com:3306";
+	$un="0Qc34rspqi";
+	$pw="dGdmOsAXAn";
+	$db="0Qc34rspqi";
 	$conn=mysqli_connect($s,$un,$pw,$db);
 	if(!$conn)
 		die("error".mysqli_connect_error());
