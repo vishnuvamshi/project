@@ -118,11 +118,11 @@
 	if($_SERVER["REQUEST_METHOD"]=="POST")
 	{
 		echo('<script> this.style.background="ba5.jpg"</script>');
-	$s="localhost";
-	$u="root";
-	$p="";
-	$d="MyDB";
-	$con=new mysqli($s,$u,$p,$d);
+	$s="remotemysql.com:3306";
+	$un="0Qc34rspqi";
+	$pw="dGdmOsAXAn";
+	$db="0Qc34rspqi";
+	$con=mysqli_connect($s,$un,$pw,$db);
 	if($con->connect_error)
 	{
 		die($con->connect_error);
@@ -206,8 +206,8 @@
 	 	mysqli_query($con,$sql11);
 	 	//if(mysqli_query($con,$sql11))
 	 		// echo "<script>alert('Items added to the previous order.');</script>";
-		$sql="INSERT INTO ordered VALUES ('$username','$pwd','$restname','$foodordered')";
-		if(mysqli_query($con,$sql)){
+		$sql12="INSERT INTO ordered VALUES ('$username','$pwd','$restname','$foodordered')";
+		if(mysqli_query($con,$sql12)){
 			echo ("<script>alert('Order successful.. Your current item/s:".ucfirst($foodordered)."');location.href='menu.php';</script>");
 		}
 		else
@@ -215,20 +215,20 @@
 			echo ("<script>alert('You have already ordered these items in this Restaurant');location.href='menu.php';</script>");
 		}}
 	}
-?>
+// ?>
 
 
 
-<?php  
-	$s="localhost";
-	$u="root";
-	$p="";
-	$d="MyDB";
-	$con=new mysqli($s,$u,$p,$d);
-	if($con->connect_error)
-	{
-		die($con->connect_error);
-	}
+// <?php  
+// 	$s="localhost";
+// 	$u="root";
+// 	$p="";
+// 	$d="MyDB";
+// 	$con=new mysqli($s,$u,$p,$d);
+// 	if($con->connect_error)
+// 	{
+// 		die($con->connect_error);
+// 	}
 	echo '<table cellpadding="7" style="background-color: cyan;align-items: center;color:blue; font-family: times new roman; border-radius: 0px;font-size:23px;border: 5px solid black;display:;max-width:100%; min-width: 50%; width: 100%" border="0" id="infff">
 		<tr><th colspan="2" align="center" style="font-size:30px;color:  #99189f;background-color:gold; width:;border-radius:0px;"><u>Restaurant</u></th>
 		<th colspan="2" align="center" style="font-size:30px;color: #99189f;background-color:gold; width:;border-radius:0px;"><u>Available Items</u></th></tr>';
@@ -252,10 +252,10 @@
 						$s1="both";
 				//echo '<script>alert("'.$_SESSION["food"].'");</script>';
 				if($s1!="both")
-				$sql2="select item from items where restaurant='$s' and type='$s1'";
+				$sql1="select item from items where restaurant='$s' and type='$s1'";
 				else
-				 	$sql2="select item from items where restaurant='$s'";
-				$res1=$con->query($sql2);
+				 	$sql1="select item from items where restaurant='$s'";
+				$res1=$con->query($sql1);
 				$rowsno1=$res1->num_rows;
 
 				if($res1->num_rows>0)
@@ -294,14 +294,14 @@
 			if(isset($_SESSION["user"]))
 			echo '<script>document.getElementById("logg").style.display="block";</script>';
 		$sql2="select DISTINCT rest from restaurant";
-		$res2=$con->query($sql2);
-		$rowsno2=$res2->num_rows;
-		if($res2->num_rows>0)
+		$res23=$con->query($sql2);
+		$rowsno23=$res23->num_rows;
+		if($res23->num_rows>0)
 		{
 			echo ('<th rowspan=""><select name="restaurant1" id="restaurant1" style="color:;background-color:skyblue ;height: 34px;width: 200px">');
-			while($row2=$res2->fetch_assoc())
+			while($row23=$res23->fetch_assoc())
 			{
-				echo '<option value="'.$row2["rest"].'">'.ucfirst($row2["rest"]).'</option>';
+				echo '<option value="'.$row23["rest"].'">'.ucfirst($row23["rest"]).'</option>';
 			}
 		}
 		else
