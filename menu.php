@@ -66,20 +66,20 @@
 	<h3 align="center" style="padding-top: 0px;font-size: 40px;color: darkblue"><u>Tasty Food</u></h3>
 	<table style="width:100%"><tr><td height="225">
 	
-		<abbr title="Dosa"><table><tr><th width="px">
+		<abbr title="Dosa"><table><tr><th width="">
 			<span >
 				<a href="dosa.jpg">
 					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="dosa.jpg" height="200px" width="430px" alt="dosa" style="border-radius: 20%;">
 				</a>
 			</span>
-		</abbr></th><th width="px">
+		</abbr></th><th width="">
 		<abbr title="Biryani">
 			<span >
 				<a href="biryani.jpg">
 					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="biryani.jpg" height="200px" width="430px" alt="biryani" style="border-radius: 20%">
 				</a>
 			</span><br>
-		</abbr></th><th width="px">
+		</abbr></th><th width="">
 		<abbr title="Fish Fry">
 			<span >
 				<a href="fish.jpg">
@@ -87,21 +87,21 @@
 				</a>
 			</span><br>
 		</abbr></th>
-	</tr><tr><th width="440px">
+	</tr><tr><th width="">
 		<abbr title="Burger">
 			<span >
 				<a href="burger.jpg">
 					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="burger.jpg" height="200px" width="430px" alt="Burger" style="border-radius: 20%">
 				</a>
 			</span>
-		</abbr></th><th width="440px">
+		</abbr></th><th width="">
 		<abbr title="Samosa">
 			<span >
 				<a href="samosa.jpg">
 					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="samosa.jpg" height="200px" width="430px" alt="Samosa" style="border-radius: 20%;background: fixed;">
 				</a>
 			</span>
-		</abbr></th><th width="440px">
+		</abbr></th><th width="">
 		<abbr title="pizza">
 			<span >
 				<a href="pizza.jpg">
