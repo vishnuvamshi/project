@@ -93,10 +93,10 @@
 		</tr>
 		<tr>
 			<td align="center" colspan="">
-					<input type="reset" value="Reset" style="background-color: red;font-color:black ;height: 60px;width: 150px;border-radius: 30px;font-size: 19px;text-align: center;" onmouseover="bigout2r(this)" onmouseleave="bigsp2r(this)">
+					<input type="reset" value="Reset" style="background-color: cyan;font-color:black ;height: 60px;width: 150px;border-radius: 30px;font-size: 19px;text-align: center;" onmouseover="bigout2r(this)" onmouseleave="bigsp2r(this)">
 							</td>
 			<td height="100" align="">
-					<input type="submit" value="Submit" id="sub" name="submitt" style="background-color: blue;font-color:black ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigout2b(this)" onmouseleave="bigsp2b(this)">
+					<input type="submit" value="Submit" id="sub" name="submitt" style="background-color: yellow;font-color:black ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigout2b(this)" onmouseleave="bigsp2b(this)">
 			</td></tr>
 			</table>
 		</form>
