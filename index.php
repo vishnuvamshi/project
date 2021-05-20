@@ -9,6 +9,6 @@
 // 	echo "<script>alert('droped');</script>";
 //  echo "<script>alert('welcome');location.href='sqldatabase.php'</script>";
 //to create database tables
-//echo "<script>location.href='sqldatabase.php'</script>";
+echo "<script>location.href='sqldatabase.php'</script>";
 	echo "<script>location.href='menu.php'</script>";
 ?>
