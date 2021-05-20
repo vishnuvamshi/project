@@ -231,9 +231,9 @@
 	{
 		die($con->connect_error);
 	}
-	echo '<table cellpadding="7" style="background-color: cyan;align-items: center;color:blue; font-family: times new roman; border-radius: 0px;font-size:23px;border: 5px solid black;display:;max-width:100%; min-width: 50%; width: 100%" border="0" id="infff">
-		<tr><th colspan="2" align="center" style="font-size:30px;color:  #99189f;background-color:gold; width:;border-radius:0px;"><u>Restaurant</u></th>
-		<th colspan="2" align="center" style="font-size:30px;color: #99189f;background-color:gold; width:;border-radius:0px;"><u>Available Items</u></th></tr>';
+	echo '<table cellpadding="7" style="background-color: cyan;align-items: center;color:blue; font-family: times new roman; border-radius: 30px;font-size:23px;border: 5px solid black;display:;max-width:100%; min-width: 50%; width: 100%" border="0" id="infff">
+		<tr><th colspan="2" align="center" style="font-size:30px;color:  #99189f;background-color:gold; width:;border-radius:30px;"><u>Restaurant</u></th>
+		<th colspan="2" align="center" style="font-size:30px;color: #99189f;background-color:gold; width:;border-radius:30px;"><u>Available Items</u></th></tr>';
 	$sql="select DISTINCT restaurant from items";
 	$res=$con->query($sql);
 		$rowsno=$res->num_rows;
@@ -284,11 +284,11 @@
 		}
 		echo '</table>';
 		echo '<form action="menu.php" method="POST" enctype="multipart/form-data" style="font-size: 18px;font-weight: bold; ">
-		<div align="center" style="display:none" id="logg"><div align="center" style="min-width:60%;max-width:100%;width:70%;height: px; padding: 20px;border: 5px solid black;margin: 1px;border-radius: 20%;
+		<div align="center" style="display:none" id="logg"><div align="center" style="min-width:60%;max-width:100%;width:70%;height: px; padding: 20px;border: 5px solid black;margin: 1px;border-radius: 77px;
 			overflow: auto;color: blue;font-size: 26px;background-color: lightgray;font-style: italic;">  
-		<table border="0" width="95%" cellpadding="7" cellspacing="1" align="center" title="Order" id="user" style="background-color: skyblue;align-items: center;color:blue; font-family: times new roman;max-width:100%; border-radius: 5%;font-size:23px;border: 2px solid black;">
+		<table border="0" width="95%" cellpadding="7" cellspacing="1" align="center" title="Order" id="user" style="background-color: skyblue;align-items: center;color:blue; font-family: times new roman;max-width:100%; border-radius: 30px;font-size:23px;border: 2px solid black;">
 		<tr align="center" style="background-color:yellow">
-			<th style="color:  #99189f;font-size: 30px;" colspan="2"><u>Select to Order</u></th>
+			<th style="color:  #99189f;font-size: 30px;border-radius:30px" colspan="2"><u>Select to Order</u></th>
 		</tr>
 		<tr >
 			<th style="font-size:30px;">Select Restaurant:</th>
