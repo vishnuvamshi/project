@@ -5,11 +5,11 @@
 </head>
 <body>
 	<?php
-	$s="localhost";
-	$u="root";
-	$p="";
-	$d="MyDB";
-	$con=new mysqli($s,$u,$p,$d);
+// 	$s="localhost";
+// 	$u="root";
+// 	$p="";
+// 	$d="MyDB";
+// 	$con=new mysqli($s,$u,$p,$d);
 	if($con->connect_error)
 	{
 		die($con->connect_error);
