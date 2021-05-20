@@ -5,5 +5,7 @@
 // 	$db="0Qc34rspqi";
 // 	$con=mysqli_connect($s,$un,$pw,$db);
  // echo "<script>alert('welcome');location.href='sqldatabase.php'</script>";
+//to create database tables
+//echo "<script>location.href='sqldatabase.php'</script>";
 	echo "<script>location.href='menu.php'</script>";
 ?>
