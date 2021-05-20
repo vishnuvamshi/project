@@ -215,20 +215,19 @@
 			echo ("<script>alert('You have already ordered these items in this Restaurant');location.href='menu.php';</script>");
 		}}
 	}
-// ?>
+?>
 
 
-
-// <?php  
-// 	$s="localhost";
-// 	$u="root";
-// 	$p="";
-// 	$d="MyDB";
-// 	$con=new mysqli($s,$u,$p,$d);
-// 	if($con->connect_error)
-// 	{
-// 		die($con->connect_error);
-// 	}
+ <?php  
+	$s="remotemysql.com:3306";
+	$un="0Qc34rspqi";
+	$pw="dGdmOsAXAn";
+	$db="0Qc34rspqi";
+	$con=mysqli_connect($s,$un,$pw,$db);
+	if($con->connect_error)
+	{
+		die($con->connect_error);
+	}
 	echo '<table cellpadding="7" style="background-color: cyan;align-items: center;color:blue; font-family: times new roman; border-radius: 0px;font-size:23px;border: 5px solid black;display:;max-width:100%; min-width: 50%; width: 100%" border="0" id="infff">
 		<tr><th colspan="2" align="center" style="font-size:30px;color:  #99189f;background-color:gold; width:;border-radius:0px;"><u>Restaurant</u></th>
 		<th colspan="2" align="center" style="font-size:30px;color: #99189f;background-color:gold; width:;border-radius:0px;"><u>Available Items</u></th></tr>';
