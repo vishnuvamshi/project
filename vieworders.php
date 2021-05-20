@@ -33,15 +33,15 @@
 				echo('<div align="center">
 					<table cellpadding="7" style="background-color: yellow;align-items: center;color:blue; font-family: times new roman; border-radius: 30px;font-size:23px;min-width:50%;border: 5px solid black;display:;max-width:95%" border="0" >
 		<tr><th align="center" style="font-size:30px;background-color:cyan; width:;border-radius:0px;color:black">Customer Name</th>
-		<th align="center" style="font-size:30px;background-color:cyan; width:;border-radius:0px;color:black">Orders
+		<th align="center" style="font-size:30px;background-color:cyan; width:;border-radius:0px;color:black">Ordered items
 		</th>
 		</tr>
 					');
-		$s="localhost";
-		$u="root";
-		$p="";
-		$d="MyDB";
-		$con=new mysqli($s,$u,$p,$d);
+		$s="remotemysql.com:3306";
+		$un="0Qc34rspqi";
+		$pw="dGdmOsAXAn";
+		$db="0Qc34rspqi";
+		$con=mysqli_connect($s,$un,$pw,$db);
 		if($con->connect_error)
 		die($con->connect_error);
 		$name=$_SESSION["user"];
