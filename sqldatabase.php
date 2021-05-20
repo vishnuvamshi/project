@@ -35,7 +35,7 @@
 	    	echo "<script>alert('Ordered table created successfully.');</script>";}
 	    else
 	    	echo "<script>alert('Ordered table already created.');</script>";
-	echo "<script>alert('Successfully connected to database');location.href='menu.php';</script>";}
+	echo "<script>alert('Successfully connected to database');location.href='menu.php';</script>";
 	echo "<script>location.href='menu.php';</script>";}
 	?>
 
