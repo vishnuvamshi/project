@@ -44,11 +44,11 @@
 		if(isset($_POST['submitt']))
 	{
 		echo('<script> this.style.background="ba5.jpg"</script>');
-	$s="localhost";
-	$u="root";
-	$p="";
-	$d="MyDB";
-	$con=new mysqli($s,$u,$p,$d);
+	$s="remotemysql.com:3306";
+	$un="0Qc34rspqi";
+	$pw="dGdmOsAXAn";
+	$db="0Qc34rspqi";
+	$con=mysqli_connect($s,$un,$pw,$db);
 	if($con->connect_error)
 	{
 		die($con->connect_error);
