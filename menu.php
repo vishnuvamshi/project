@@ -69,21 +69,21 @@
 		<abbr title="Dosa"><table><tr><th width="">
 			<span >
 				<a href="dosa.jpg">
-					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="dosa.jpg" height="200px" width="430px" alt="dosa" style="border-radius: 20%;">
+					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="dosa.jpg" height="200px" width="" alt="dosa" style="border-radius: 20%;">
 				</a>
 			</span>
 		</abbr></th><th width="">
 		<abbr title="Biryani">
 			<span >
 				<a href="biryani.jpg">
-					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="biryani.jpg" height="200px" width="430px" alt="biryani" style="border-radius: 20%">
+					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="biryani.jpg" height="200px" width="" alt="biryani" style="border-radius: 20%">
 				</a>
 			</span><br>
 		</abbr></th><th width="">
 		<abbr title="Fish Fry">
 			<span >
 				<a href="fish.jpg">
-					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="fish.jpg" height="200px" width="430px" alt="fishfry" style="border-radius: 20%">
+					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="fish.jpg" height="200px" width="" alt="fishfry" style="border-radius: 20%">
 				</a>
 			</span><br>
 		</abbr></th>
@@ -91,21 +91,21 @@
 		<abbr title="Burger">
 			<span >
 				<a href="burger.jpg">
-					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="burger.jpg" height="200px" width="430px" alt="Burger" style="border-radius: 20%">
+					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="burger.jpg" height="200px" width="" alt="Burger" style="border-radius: 20%">
 				</a>
 			</span>
 		</abbr></th><th width="">
 		<abbr title="Samosa">
 			<span >
 				<a href="samosa.jpg">
-					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="samosa.jpg" height="200px" width="430px" alt="Samosa" style="border-radius: 20%;background: fixed;">
+					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="samosa.jpg" height="200px" width="" alt="Samosa" style="border-radius: 20%;background: fixed;">
 				</a>
 			</span>
 		</abbr></th><th width="">
 		<abbr title="pizza">
 			<span >
 				<a href="pizza.jpg">
-					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="pizza.jpg" height="200px" width="430px" alt="Pizza" style="border-radius: 20%;background: fixed;">
+					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="pizza.jpg" height="200px" width="" alt="Pizza" style="border-radius: 20%;background: fixed;">
 				</a>
 			</span>
 		</abbr></th></tr></table>
