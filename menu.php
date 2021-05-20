@@ -114,7 +114,7 @@
 		</abbr></th></tr></table></marquee>
 	</td></tr></table>
 	<div align="center" id="logged"><a href="login.php"><button name="button" type="button" style="background-color: pink;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigsp2g(this)" onmouseleave="bigout2g(this)" onclick="alert('Please login to order Food')">Order</button></a></div>
-
+	<?php if(isset($_SESSION["user"]))echo "<script>document.getElementById('logged').style.display='none';</script>";?>
 	<h3 align="center" style="padding-top: 0px;font-size: 35px;color: red;background: white"><u>Available Restaurants and Items</u></h3>
 <?php  
 
