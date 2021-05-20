@@ -14,6 +14,7 @@
 	{
 		die($con->connect_error);
 	}
+	else{
 		$sql="CREATE table customer(name varchar(15),pwd varchar(15),mob varchar(11),preference varchar(8), PRIMARY KEY(name,pwd),UNIQUE(mob))";
 		 if(mysqli_query( $con,$sql)){  
 	    	echo "<script>alert('Customer table created successfully.');</script>";}
@@ -34,7 +35,7 @@
 	    	echo "<script>alert('Ordered table created successfully.');</script>";}
 	    else
 	    	echo "<script>alert('Ordered table already created.');</script>";
-
+	echo "<script>alert('Successfully connected to database');location.href='menu.php';</script>";}
 
 	?>
 
