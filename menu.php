@@ -287,79 +287,72 @@
 		<div align="center" style="display:none" id="logg"><div align="center" style="min-width:60%;max-width:100%;width:70%;height: px; padding: 20px;border: 5px solid black;margin: 1px;border-radius: 77px;
 			overflow: auto;color: blue;font-size: 26px;background-color: lightgray;font-style: italic;">  
 		<table border="0" width="95%" cellpadding="7" cellspacing="1" align="center" title="Order" id="user" style="background-color: skyblue;align-items: center;color:blue; font-family: times new roman;max-width:100%; border-radius: 30px;font-size:23px;border: 2px solid black;">
-		<tr align="center" style="background-color:yellow">
-			<th style="color:  #99189f;font-size: 30px;border-radius:30px" colspan="2"><u>Select to Order</u></th>
+		<tr align="center" style="">
+			<th style="color: #99189f;font-size: 30px;background-color:yellow;border-radius:30px" colspan="3"><u>Select to Order</u></th>
 		</tr>
 		<tr >
-			<th style="font-size:30px;">Select Restaurant:</th>
 			';
 			if(isset($_SESSION["user"]))
 			echo '<script>document.getElementById("logg").style.display="block";</script>';
 		$sql2="select DISTINCT rest from restaurant";
-		$res23=$con->query($sql2);
-		$rowsno23=$res23->num_rows;
-		if($res23->num_rows>0)
+		$res2=$con->query($sql2);
+		$rowsno2=$res2->num_rows;$c=1;$cc=0;
+		if($res2->num_rows>0)
 		{
-			echo ('<th rowspan=""><select name="restaurant1" id="restaurant1" style="color:;background-color:skyblue ;height: 34px;width: 200px">');
-			while($row23=$res23->fetch_assoc())
-			{
-				echo '<option value="'.$row23["rest"].'">'.ucfirst($row23["rest"]).'</option>';
-			}
-		}
-		else
-			echo ("<th style='font-size:30px;color:  red'>No Restaurants Available");
-		echo "</th></tr><tr><th style='font-size:30px;'>Select Items:</th>";
+			while($row2=$res2->fetch_assoc())
+			{$cc++;
+				echo ('<th rowspan="">');
+				echo '<input type="radio" name="restaurant1" value="'.ucfirst($row2["rest"]).'" id="'.$c.'" checked><label for="'.$c.'">'.ucfirst($row2["rest"]).'</lable>';
+				$nr=$row2["rest"];$c++;
 			if(isset($_SESSION["user"]))
 				$foodtype=$_SESSION["food"];
 			else
 				$foodtype="both";
 			if($foodtype=="veg")
-				$sql3="select DISTINCT item from items where type='$foodtype'";
+				$sql33="select DISTINCT item from items where type='$foodtype' AND restaurant='$nr'";
 			else if($foodtype=="non-veg")
-				$sql3="select DISTINCT item from items where type='$foodtype'";
+				$sql33="select DISTINCT item from items where type='$foodtype'  AND restaurant='$nr'";
 			else
-				$sql3="select DISTINCT item from items";
-			$res3=$con->query($sql3);
-			$rowsno3=$res3->num_rows;
-			$coun=0;
-			if($res3->num_rows>0)
+				$sql33="select DISTINCT item from items where restaurant='$nr'";
+			$res33=$con->query($sql33);
+			$rowsno33=$res33->num_rows;
+			$count=0;
+			if($res33->num_rows>0)
 			{	echo "<th style='color:  #99189f'>";
-				while($row3=$res3->fetch_assoc())
-				{$coun++;
-				echo '<input type="checkbox" name="item[]" value="'.$row3["item"].'"><label style="font-color:red;">'.ucfirst($row3["item"]).'  </label>';
-					if($coun%5==0)
+				while($row33=$res33->fetch_assoc())
+				{$count++;
+				echo '<input type="checkbox" name="item[]" value="'.$row33["item"].'"><label style="font-color:red;">'.ucfirst($row33["item"]).'  </label>';
+					if($count%3==0)
 						{echo '<br><br>';}
 				}
 			}
 			else
-				echo "<th style='color: red;font-size:30px'>No items Available";
-		echo '</th>
-		</tr>
-		</table></form>';
-	?>
-<?php  
-	 if(isset($_SESSION["user"]))
+				echo "<th style='color: red;font-size:30px'>No items Available</th>";
+			echo '</th>';
+	if(isset($_SESSION["user"]))
  	{	echo "<script>document.getElementById('logged').style.display='none';</script>";
 	if($_SESSION["type"]=="customer")
-	{echo '<br><div align="center">
-	<button name="button" type="submit" style="background-color: pink;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigsp2g(this)" onmouseleave="bigout2g(this)" onclick="">Order</button>
-	</div>
-<script type="text/javascript">
-	function order() {
-		alert("Your food is on your way!!");
+	{
+		if($cc==1)
+		echo '<th align="center" rowspan="'.$rowsno2.'">
+	<button name="button" type="submit" style="background-color: pink;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigout2g(this)" onmouseleave="bigsp2g(this)" onclick="">Order</button>
+	</th>';
 	}
-</script>';}
 	else{
-		echo '<div align="center">
-	<button name="button" type="button" style="background-color: pink;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigsp2g(this)" onmouseleave="bigout2g(this)" onclick="order1()")">Order</button>
-	</div></div>
-	<script type="text/javascript">
-	function order1() {
-		alert("You do not have permission to order Food!!");
+		if($cc==1)
+		echo '<th align="center" rowspan="'.$rowsno2.'">
+	<button name="button" type="button" style="background-color: pink;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigout2g(this)" onmouseleave="bigsp2g(this)" onclick="order1()")">Order</button>
+	</th>';
+	echo '<script type="text/javascript">
+		function order1() 
+			alert("You do not have permission to order Food!!");
+		</script>';}
 	}
-</script>';
-
-	}}
-?>
+	echo '</tr>';	}
+		}
+		else
+			echo ("<th style='font-size:30px;color:  red'>No Restaurants Available");
+		echo '</table></form>';
+	?>
 </body>
 </html>
