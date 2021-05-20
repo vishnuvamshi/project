@@ -64,7 +64,7 @@
 	
 <br><br>
 	<h3 align="center" style="padding-top: 0px;font-size: 40px;color: darkblue"><u>Tasty Food</u></h3>
-	<table style="max-width:100%; min-width: 100%%; width: 100%"><tr><td height="225">
+	<table style="max-width:100%; min-width: 100%%; width: 100%"><tr width="100%"><td height="225">
 	
 		<abbr title="Dosa"><table><tr><th width="">
 			<span >
