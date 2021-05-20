@@ -24,6 +24,7 @@
 <div align="right" id="out" style="display:  ">
 	<form action="logout.php" method="get" id="logoutf">
 					<input type="submit" name="logoutf" hidden=""></form>
+	<a href="addmenuitems.php"><button style="background-color: violet;font-color:#f90413 ;height: 30px;width: 130px;border-radius: 30px;font-size: 15px;text-align: center;display: " id="out1">Add_menu_items</button></a>
 			<button style="background-color: violet	;font-color:#f90413 ;height: 30px;width: 130px;border-radius: 30px;font-size: 15px;text-align: center;display: " id="out" onclick="lout()">logout</button></div>
 	
 	<h1 colspan="3" align="center" style="color: darkblue;font-size: 45px;font-family: Segoe Script;">
