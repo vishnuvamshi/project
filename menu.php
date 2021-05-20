@@ -58,8 +58,11 @@
   	}
   	else
   	{echo '<script>document.getElementById("log").style.display="none";document.getElementById("out").style.display="block";</script>';
-  	if($_SESSION["rest"]=="c")
-  		echo '<script>document.getElementById("out1").style.display="none";document.getElementById("out2").style.display="none";</script>';}
+  	if($_SESSION["rest"]=="c"){
+  		echo '<script>document.getElementById("out1").style.display="none";document.getElementById("out2").style.display="none";</script>';
+  	echo "<marquee scrollamount='15' behaviour='scroll' direction='left' onmouseover='this.stop()' onmouseout='this.start()'><span style='color: blue;font-size:40px;background-color: gold;padding-top: 0px;padding-bottom: 0px;align-items: center; font-family: times in roman; border-radius: 20px;border: 2px solid black'>Welcome ".$_SESSION["user"]." order your favourite food</span></marquee>";}
+  	else
+  		echo "<marquee scrollamount='15' behaviour='scroll' direction='left' onmouseover='this.stop()' onmouseout='this.start()'><span style='color: blue;font-size:40px;background-color: gold;padding-top: 0px;padding-bottom: 0px;align-items: center; font-family: times in roman; border-radius: 20px;border: 2px solid black'>Welcome ".$_SESSION["user"]." to your restaurant '".ucwords($_SESSION["rest"])."'</span></marquee>";}
 ?>	
 	
 <br><br>
