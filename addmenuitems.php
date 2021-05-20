@@ -41,6 +41,7 @@
 <div align="right" id="out" style="display:  ">
 	<form action="logout.php" method="get" id="logoutf">
 					<input type="submit" name="logoutf" hidden=""></form>
+	<a href="vieworders.php"><button style="background-color: violet;font-color:#f90413 ;height: 30px;width: 130px;border-radius: 30px;font-size: 15px;text-align: center;display: " id="out2">View_orders</button></a>
 			<button style="background-color: violet	;font-color:#f90413 ;height: 30px;width: 130px;border-radius: 30px;font-size: 15px;text-align: center;display: " id="out" onclick="lout()">logout</button></div>
 <?php 
 
