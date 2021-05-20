@@ -35,14 +35,14 @@ function bigsp(x) {
 		  	//x.style.width = "90px";
 		  	x.style.background="blue";
 		  	}function bigsp2g(x) {
-			x.style.background="pink";
+			x.style.background="orange";
 		  	//x.style.width = "100p";
 		  	//x.style.background="red";
 			}
 			function bigout2g(x) {
 			//x.style.height = "30px";
 		  	//x.style.width = "90px";
-		  	x.style.background="gray";
+		  	x.style.background="pink";
 		  	}
 		  function bigImg(x) {
 		  x.style.height = "250px";
