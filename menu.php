@@ -96,8 +96,8 @@ echo '<div align="right" id="out" style="display:  ">
 	{
 		die($con->connect_error);
 	}	
-	$us=$_SESSION["user"];$pwd=$_SESSION["pwd"];
-	$sql123="select * from ordered where name='$us' AND pwd='$pwd'";
+	$us=$_SESSION["user"];$mob=$_SESSION["mob"];
+	$sql123="select * from ordered where name='$us' AND mob='$mob'";
 	if(mysqli_query($con,$sql123))
 	$res123=mysqli_query($con,$sql123);	
 	if($res123->num_rows>0)
@@ -108,15 +108,19 @@ echo '<div align="right" id="out" style="display:  ">
 			<th colspan="5" align="center" style="font-size:40px;background-color:cyan; width:1200px;border-radius:20px;">My_orders</th>
 			</tr>
 			<tr style="background-color:;color:black;">
-				<th colspan="" align="center">Restaurant name</th><th>Ordered food</th><th>Status</th><th>Cancel</th>
+				<th colspan="" align="center">Restaurant name</th><th>Ordered food</th><th>Status</th><th>Process</th>
 			</tr>
 			<form method="post" action="menu.php">');
 		while($row123=mysqli_fetch_assoc($res123))
 		{
 			echo('<tr>
-				<td align="center">'.ucwords($row123["restaurant"]).'</td><td>'.$row123["food"].'</td><td>Waiting for conformation </td>'); 
+				<td align="center">'.ucwords($row123["restaurant"]).'</td><td>'.$row123["food"].'</td>'); 
+			if($row123["status"]=="1")
+				echo '<td>Order confirmed</td><td>Food is on the way</td></tr>';
+			else
+			{	echo '<td>Waiting for confirmation</td>';
 				echo '<td align="center">
-				<button type="submit" style="background-color: cyan	;font-color:#f90413 ;height: 30px;width: 120px;border-radius: 30px;font-size: 15px;text-align: center;display: " id="can" name="can" value="'.$row123["restaurant"].'" onclick="return cancelconfirm()">Cancel</button></td></tr>';
+				<button type="submit" style="background-color: cyan	;font-color:#f90413 ;height: 30px;width: 120px;border-radius: 30px;font-size: 15px;text-align: center;display: " id="can" name="can" value="'.$row123["restaurant"].'" onclick="return cancelconfirm()">Cancel</button></td></tr>';}
 		}echo '</table>';
 	}
 	else
@@ -185,6 +189,7 @@ else
 			</span>
 		</abbr></th></tr></table></marquee>
 	</td></tr></table>
+
 	<h3 align="center" style="padding-top: 0px;font-size: 35px;color: red;background: white"><u>Available Restaurants and Items</u></h3>
 <?php  
 
@@ -204,11 +209,11 @@ else
 	$restname=$_POST["restaurant1"];
 	//$foodorder=$_POST["item[]"];
 	$username=$_SESSION["user"];
-	$pwd=$_SESSION["pwd"];
+	$mo=$_SESSION["mob"];
 	$foodorder= NULL;
 	$check=0;$arr=array();$ff=0;
-	if(!empty($_POST['item'])){
-
+	if(!empty($_POST['item']))
+	{
 		foreach ($_POST['item'] as $food) {
 			$food1=ucfirst($food);
 			array_push($arr, "$food1");$ff++;
@@ -227,7 +232,7 @@ else
 			//echo '<script>alert("'.$foodorder.'");</script>';
 			
 		}$foodordered="";
-		$sql6="select food from ordered where name='$username' AND pwd='$pwd' AND restaurant='$restname'";
+		$sql6="select food from ordered where name='$username' AND status='0' AND mob='$mo' AND restaurant='$restname'";
 		$res6=$con->query($sql6);//echo '<script>alert("hi");</script>';
 		if($res6->num_rows>0)
 		{	
@@ -275,11 +280,11 @@ else
 	//    echo "<script>alert('Table created successfully.');</script>";}
 	 	
 	 	if($check==0){
-	 	$sql11="delete from ordered where name='$username' AND pwd='$pwd' AND restaurant='$restname'";
+	 	$sql11="delete from ordered where name='$username' AND mob='$mo' AND restaurant='$restname' AND status='0'";
 	 	mysqli_query($con,$sql11);
 	 	//if(mysqli_query($con,$sql11))
 	 		// echo "<script>alert('Items added to the previous order.');</script>";
-		$sql="INSERT INTO ordered VALUES ('$username','$pwd','$restname','$foodordered')";
+		$sql="INSERT INTO ordered VALUES ('$username','$mo','$restname','$foodordered','0')";
 		if(mysqli_query($con,$sql)){
 			echo ("<script>alert('Order successful.. Your current item/s:".ucfirst($foodordered)."');location.href='menu.php';</script>");
 		}
@@ -291,7 +296,7 @@ else
 	if(isset($_POST['can']))
 	{
 		echo('<script> this.style.background="ba5.jpg"</script>');
-		$s="remotemysql.com:3306";
+	$s="remotemysql.com:3306";
 	$un="0Qc34rspqi";
 	$pw="dGdmOsAXAn";
 	$db="0Qc34rspqi";
@@ -300,9 +305,9 @@ else
 			die($con->connect_error);
 		$restname=$_POST["can"];
 		$username=$_SESSION["user"];
-		$pwd=$_SESSION["pwd"];
+		$mobb=$_SESSION["mob"];
 		//echo '<script>alert("'.$username.'");</script>';
-		$sql55="DELETE FROM ordered where name='$username' AND restaurant='$restname' AND pwd='$pwd'";
+		$sql55="DELETE FROM ordered where name='$username' AND restaurant='$restname' AND mob='$mobb' AND status='0'";
 			if($con->query($sql55))
 				echo "<script>alert('Order Cancelled from the restaurant ".ucfirst($restname)."');location.href='menu.php';</script>";
 	}
@@ -311,8 +316,6 @@ else
 
 
 <?php  
-// 	if(!(isset($_SESSION['user'])))
-// 	echo '<div align="center" id="logged"><a href="login.php"><button name="button" type="button" style="background-color: pink;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigout2g(this)" onmouseleave="bigsp2g(this)" onclick="alert("Please login to order Food")">Order</button></a></div>';
 	$s="remotemysql.com:3306";
 	$un="0Qc34rspqi";
 	$pw="dGdmOsAXAn";
@@ -374,9 +377,9 @@ else
 
 		}
 		echo '</table>';
-
-	if(!(isset($_SESSION['user'])))
+		if(!(isset($_SESSION['user'])))
 	echo '<div align="center" id="logged"><a href="login.php"><button name="button" type="button" style="background-color: pink;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigout2g(this)" onmouseleave="bigsp2g(this)" onclick="alert(\'Please login to order Food\')">Order</button></a></div>';
+
 		echo '<form action="menu.php" method="POST" enctype="multipart/form-data" style="font-size: 18px;font-weight: bold; ">
 		<div align="center" style="display:none" id="logg"><div align="center" style="min-width:60%;max-width:100%;width:70%;height: px; padding: 20px;border: 5px solid black;margin: 1px;border-radius: 77px;
 			overflow: auto;color: blue;font-size: 26px;background-color: lightgray;font-style: italic;">  
@@ -384,10 +387,12 @@ else
 		<tr align="center" style="">
 			<th style="color: #99189f;font-size: 30px;background-color:yellow;border-radius:30px" colspan="3"><u>Select to Order</u></th>
 		</tr>
-		<tr >';
-		//echo '<div align="center" id="logged"><a href="login.php"><button name="button" type="button" style="background-color: pink;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigout2g(this)" onmouseleave="bigsp2g(this)" onclick="alert("Please login to order Food")">Order</button></a></div>';
-		if(isset($_SESSION["user"]))
-		 echo '<script>document.getElementById("logg").style.display="block";</script>';
+		<tr >
+			';
+
+		
+			if(isset($_SESSION["user"]))
+			echo '<script>document.getElementById("logg").style.display="block";</script>';
 		$sql2="select DISTINCT rest from restaurant";
 		$res2=$con->query($sql2);
 		$rowsno2=$res2->num_rows;$c=1;$cc=0;
@@ -423,6 +428,7 @@ else
 			else
 				echo "<th style='color: red;font-size:30px'>No items Available</th>";
 			echo '</th>';
+
 	if(isset($_SESSION["user"]))
  	{	echo "<script>document.getElementById('logged').style.display='none';</script>";
 	if($_SESSION["type"]=="customer")
@@ -435,14 +441,8 @@ else
 	else{
 		if($cc==1)
 		echo '<th align="center" rowspan="'.$rowsno2.'">
-	<button name="button" type="button" style="background-color: pink;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigout2g(this)" onmouseleave="bigsp2g(this)" onclick="order1()")">Order</button>
+	<button name="button" type="button" style="background-color: pink;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigout2g(this)" onmouseleave="bigsp2g(this)" onclick="alert(\'You do not have permission to order Food!!\')")">Order</button>
 	</th>';
-	echo '<script type="text/javascript">
-	function order1() {
-		alert("You do not have permission to order Food!!");
-	}
-</script>';
-
 	}
 }
 
