@@ -131,7 +131,7 @@ echo '<div align="right" id="out" style="display:  ">
 			<th colspan="5" align="center" style="font-size:40px;background-color:cyan; width:1200px;border-radius:20px;">My_orders</th>
 			</tr>
 			<tr style="background-color:;color:black;">
-				<th colspan="" align="center">Restaurant name</th><th>Ordered food</th><th>Status</th><th>Cancel</th>
+				<th colspan="" align="center">Restaurant name</th><th>Ordered food</th><th>Status</th><th>Process</th>
 			</tr>
 			<tr><th colspan="5" style="font-size:40px" align="center">No items available</th></tr></table>');
 }}
