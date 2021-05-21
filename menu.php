@@ -120,7 +120,7 @@ echo '<div align="right" id="out" style="display:  ">
 			else
 			{	echo '<td>Waiting for confirmation</td>';
 				echo '<td align="center">
-				<button type="submit" style="background-color: cyan	;font-color:#f90413 ;height: 30px;width: 120px;border-radius: 30px;font-size: 15px;text-align: center;display: " id="can" name="can" value="'.$row123["restaurant"].'" onclick="return cancelconfirm()">Cancel</button></td></tr>';}
+				<button type="submit" style="background-color: cyan;font-color:#f90413 ;height: 30px;width: 120px;border-radius: 30px;font-size: 15px;text-align: center;display: " id="can" name="can" value="'.$row123["restaurant"].'" onclick="return cancelconfirm()">Cancel</button></td></tr>';}
 		}echo '</table>';
 	}
 	else
