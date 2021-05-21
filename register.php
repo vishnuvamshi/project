@@ -119,7 +119,7 @@
 
 		$sql="INSERT INTO customer (name,pwd,preference,mob) VALUES ('$ln','$password','$preference','$mobile')";
 		if(mysqli_query($con,$sql)){
-			echo ("<script>alert('Registration completed');location.href='menu.php';</script>");
+			echo ("<script>alert('Registration completed');location.href='login.php';</script>");
 		}
 		else
 		{	
@@ -130,7 +130,7 @@
 				echo ("<script>alert('This mobile number already has an account');location.href='register.php';</script>");
 			}
 			else
-			echo ("<script>alert('You have already registered please login');location.href='menu.php';</script>");
+			echo ("<script>alert('You have already registered please login');location.href='login.php';</script>");
 		}
 }
 	?>
