@@ -118,7 +118,7 @@
 
 		$sql="INSERT INTO restaurant (name,pwd,rest,mob) VALUES ('$ln','$password','$restname','$mobile')";
 		if(mysqli_query($conn,$sql)){
-			echo ("<script>alert('Registration completed');location.href='menu.php';</script>");
+			echo ("<script>alert('Registration completed..Please login');location.href='login.php';</script>");
 		}
 		else
 		{	
@@ -133,10 +133,10 @@
 			$res2=$conn->query($sql2);
 			if($res2->num_rows>0)
 			{
-				echo ("<script>alert('This mobile number already has an account');location.href='register.php';</script>");
+				echo ("<script>alert('This mobile number already has an account');location.href='register1.php';</script>");
 			}
 			else
-			echo ("<script>alert('You have already registered please login');location.href='menu.php';</script>");}
+			echo ("<script>alert('You have already registered please login');location.href='login.php';</script>");}
 		}
 }
 	?>
