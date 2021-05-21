@@ -30,12 +30,11 @@
 	    	echo "<script>alert('Items table created successfully.');</script>";}
 	      else
 	      	echo "<script>alert('Items table already created.');</script>";
-	    $sql4="CREATE table ordered(name varchar(15),pwd varchar(15),restaurant varchar(30),food varchar(50), PRIMARY KEY(name,pwd,restaurant))";
+	    $sql4="CREATE table ordered(name varchar(15),mob varchar(11),restaurant varchar(30),food varchar(50),status varchar(2))";
 		if(mysqli_query( $con,$sql4)){  
 	    	echo "<script>alert('Ordered table created successfully.');</script>";}
 	    else
 	    	echo "<script>alert('Ordered table already created.');</script>";
-	echo "<script>alert('Successfully connected to database');location.href='menu.php';</script>";
 	echo "<script>location.href='menu.php';</script>";}
 	?>
 
