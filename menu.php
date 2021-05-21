@@ -10,13 +10,15 @@
 		var nn=0;
 	</script>
 </head>
-<body background="ba8.jpg" style="background-repeat: no-repeat;background-attachment: fixed;background-position: center;background-size: cover; text-align: justify;">
+<body background="ba5.jpg" style="background-repeat: no-repeat;background-attachment: fixed;background-position: center;background-size: cover; text-align: justify;">
 <div style="background-color: lightgray;background-position: fixed;max-width: 100%; border-radius: 10%;border:3px solid black;" align="center" onmouseover="bigsp\(this)" 	onmouseleave="bigout\(this)"><a href="menu.php">
 	<abbr title="VS"><img src="vsvs.jpg" width="60px" height="50px" style="border-radius: 50%;float: left"></abbr></a>
 	<abbr title="8184839227"><img onclick="open1(this)" onmouseover="bigsp1\(this)" onmouseleave="bigout1\(this)" src="whats.jpg" width="60px" height="50px" style='float:right;'></abbr>
 	<div align="center" style="max-width: 50%;color: white;background-color: red;align-items: center; font-family: times in roman; border-radius: 30px;border: 1px solid black;">
 		<span style="font-size: 40px">Welcome To FoodShala</span></div>
 	</div>
+
+<!-- <button name="button" type="button" style="background-color: gray;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigsp2g(this)" onmouseleave="bigout2g(this)"> -->
 <script type="text/javascript">
 	var c=0;
 	function hide() {
@@ -114,7 +116,7 @@ echo '<div align="right" id="out" style="display:  ">
 			echo('<tr>
 				<td align="center">'.ucwords($row123["restaurant"]).'</td><td>'.$row123["food"].'</td><td>Waiting for conformation </td>'); 
 				echo '<td align="center">
-				<button type="submit" style="background-color: cyan;font-color:#f90413 ;height: 30px;width: 120px;border-radius: 30px;font-size: 15px;text-align: center;display: " id="can" name="can" value="'.$row123["restaurant"].'" onclick="return cancelconfirm()">Cancel</button></td></tr>';
+				<button type="submit" style="background-color: cyan	;font-color:#f90413 ;height: 30px;width: 120px;border-radius: 30px;font-size: 15px;text-align: center;display: " id="can" name="can" value="'.$row123["restaurant"].'" onclick="return cancelconfirm()">Cancel</button></td></tr>';
 		}echo '</table>';
 	}
 	else
@@ -183,10 +185,6 @@ else
 			</span>
 		</abbr></th></tr></table></marquee>
 	</td></tr></table>
-	<div align="center" id="logged"><a href="login.php"><button name="button" type="button" style="background-color: pink;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigout2g(this)" onmouseleave="bigsp2g(this)" onclick="alert('Please login to order Food')">Order</button></a></div>
-<?php if(isset($_SESSION["user"]))
- 		echo "<script>document.getElementById('logged').style.display='none';</script>";
-?>
 	<h3 align="center" style="padding-top: 0px;font-size: 35px;color: red;background: white"><u>Available Restaurants and Items</u></h3>
 <?php  
 
@@ -204,6 +202,7 @@ else
 	}
 
 	$restname=$_POST["restaurant1"];
+	//$foodorder=$_POST["item[]"];
 	$username=$_SESSION["user"];
 	$pwd=$_SESSION["pwd"];
 	$foodorder= NULL;
@@ -271,7 +270,10 @@ else
 		else
 	 	echo '<script>alert("No item has been selected.. Please select item/s to order");location.href="menu.php";</script>';}
 	//echo '<script>alert("'.$foodordered.'");</script>';
-	 
+	// $sql="CREATE table ordered(name varchar(15),restaurant varchar(15),food varchar(50))";
+	// if(mysqli_query( $con,$sql)){  
+	//    echo "<script>alert('Table created successfully.');</script>";}
+	 	
 	 	if($check==0){
 	 	$sql11="delete from ordered where name='$username' AND pwd='$pwd' AND restaurant='$restname'";
 	 	mysqli_query($con,$sql11);
@@ -309,6 +311,8 @@ else
 
 
 <?php  
+	if(isset($_SESSION['user']))
+	echo '<div align="center" id="logged"><a href="login.php"><button name="button" type="button" style="background-color: pink;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigout2g(this)" onmouseleave="bigsp2g(this)" onclick="alert("Please login to order Food")">Order</button></a></div>';
 	$s="remotemysql.com:3306";
 	$un="0Qc34rspqi";
 	$pw="dGdmOsAXAn";
@@ -377,10 +381,10 @@ else
 		<tr align="center" style="">
 			<th style="color: #99189f;font-size: 30px;background-color:yellow;border-radius:30px" colspan="3"><u>Select to Order</u></th>
 		</tr>
-		<tr >
-			';
-			if(isset($_SESSION["user"]))
-			echo '<script>document.getElementById("logg").style.display="block";</script>';
+		<tr >';
+		//echo '<div align="center" id="logged"><a href="login.php"><button name="button" type="button" style="background-color: pink;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigout2g(this)" onmouseleave="bigsp2g(this)" onclick="alert("Please login to order Food")">Order</button></a></div>';
+		if(isset($_SESSION["user"]))
+		 echo '<script>document.getElementById("logg").style.display="block";</script>';
 		$sql2="select DISTINCT rest from restaurant";
 		$res2=$con->query($sql2);
 		$rowsno2=$res2->num_rows;$c=1;$cc=0;
@@ -416,7 +420,8 @@ else
 			else
 				echo "<th style='color: red;font-size:30px'>No items Available</th>";
 			echo '</th>';
-	
+	if(isset($_SESSION["user"]))
+ 	{	echo "<script>document.getElementById('logged').style.display='none';</script>";
 	if($_SESSION["type"]=="customer")
 	{
 		if($cc==1)
