@@ -80,7 +80,7 @@
 					else
 					{	echo("<html><body background='link.jpg'></body></html>");
 						 //session_start();
-						 $_SESSION["user"]=$uname;$_SESSION["pwd"]=$pword;$_SESSION["type"]=$type;
+						 $_SESSION["user"]=$uname;$_SESSION["mob"]=$row["mob"];$_SESSION["pwd"]=$pword;$_SESSION["type"]=$type;
 						 if($type=="restaurant"){
 						 $_SESSION["rest"]=$row["rest"];$_SESSION["food"]="both";}
 						 else
