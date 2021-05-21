@@ -119,7 +119,7 @@
 
 		$sql="INSERT INTO customer (name,pwd,preference,mob) VALUES ('$ln','$password','$preference','$mobile')";
 		if(mysqli_query($con,$sql)){
-			echo ("<script>alert('Registration completed');location.href='login.php';</script>");
+			echo ("<script>alert('Registration completed..Please login');location.href='login.php';</script>");
 		}
 		else
 		{	
