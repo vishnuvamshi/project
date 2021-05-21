@@ -81,13 +81,13 @@
 		var phone=document.getElementById('mob').value;
 		var nam=document.getElementById('ln').value;
 		var pa=document.getElementById('password').value;
-		var pa1=/^[0-9]{0,10}\w{1,15}$/;
+		var pa1=/^[0-9]{0,10}\w{8,15}$/;
 		var na=/^[a-z]{1}[a-z]{1,20}$/;
 		var ph=/^[6-9]{1}[0-9]{9}$/;
 		if(!(na.test(nam)))
 			{alert("Name is wrong");return false;}
 		if(!(pa1.test(pa)))
-			{alert("Password is wrong");return false;}
+			{alert("Password length should be min 8 characters");return false;}
 		if(!(ph.test(phone)))
 			{alert("Mobile number is wrong");return false;}
 	}
