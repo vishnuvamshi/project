@@ -8,7 +8,7 @@
 		session_start();
 		session_unset(); 
 		session_destroy();
-		header("location:menu.php");?>
+		header("location:login.php");?>
 
 </body>
 </html>
