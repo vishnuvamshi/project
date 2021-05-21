@@ -61,8 +61,8 @@
 		if(isset($_POST['conf']))
 		{
 			//echo '<script>alert("'.$_POST['conf'].'");</script>';
-			$mobi=$_POST['conf'];
-			$sqll="update ordered set status='1' where mob='$mobi' and status='0'";
+			$mobi=$_POST['conf'];$re=$_SESSION['rest'];
+			$sqll="update ordered set status='1' where mob='$mobi' and status='0' and restaurant='$re'";
 			$ress=$con->query($sqll);
 			echo '<script>alert("Order Confirmed");location.href="vieworders.php";</script>';
 		}
@@ -91,7 +91,7 @@
 		}
 		else
 		{
-			echo '<tr><th colspan="2" align="center" style="font-size:30px;background-color:gold; width:;border-radius:0px;">No orders available</th></tr>';
+			echo '<tr><th colspan="4" align="center" style="font-size:30px;background-color:gold; width:;border-radius:30px;">No orders available</th></tr>';
 
 		}
 
