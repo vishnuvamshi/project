@@ -85,11 +85,11 @@ echo '<div align="right" id="out" style="display:  ">
 			else{ document.getElementById("orderstable").style.display="none";document.getElementById("order").style.background="gold";}
 		}
 		</script>';	
-	$s="localhost";
-	$u="root";
-	$p="";
-	$d="MyDB";
-	$con=new mysqli($s,$u,$p,$d);
+	$s="remotemysql.com:3306";
+	$un="0Qc34rspqi";
+	$pw="dGdmOsAXAn";
+	$db="0Qc34rspqi";
+	$con=mysqli_connect($s,$un,$pw,$db);
 	if($con->connect_error)
 	{
 		die($con->connect_error);
@@ -191,11 +191,11 @@ else
 	if(isset($_POST['button']))
 	{
 		echo('<script> this.style.background="ba5.jpg"</script>');
-	$s="localhost";
-	$u="root";
-	$p="";
-	$d="MyDB";
-	$con=new mysqli($s,$u,$p,$d);
+	$s="remotemysql.com:3306";
+	$un="0Qc34rspqi";
+	$pw="dGdmOsAXAn";
+	$db="0Qc34rspqi";
+	$con=mysqli_connect($s,$un,$pw,$db);
 	if($con->connect_error)
 	{
 		die($con->connect_error);
@@ -287,11 +287,11 @@ else
 	if(isset($_POST['can']))
 	{
 		echo('<script> this.style.background="ba5.jpg"</script>');
-		$s="localhost";
-		$u="root";
-		$p="";
-		$d="MyDB";
-		$con=new mysqli($s,$u,$p,$d);
+		$s="remotemysql.com:3306";
+	$un="0Qc34rspqi";
+	$pw="dGdmOsAXAn";
+	$db="0Qc34rspqi";
+	$con=mysqli_connect($s,$un,$pw,$db);
 		if($con->connect_error)
 			die($con->connect_error);
 		$restname=$_POST["can"];
@@ -307,11 +307,11 @@ else
 
 
 <?php  
-	$s="localhost";
-	$u="root";
-	$p="";
-	$d="MyDB";
-	$con=new mysqli($s,$u,$p,$d);
+	$s="remotemysql.com:3306";
+	$un="0Qc34rspqi";
+	$pw="dGdmOsAXAn";
+	$db="0Qc34rspqi";
+	$con=mysqli_connect($s,$un,$pw,$db);
 	if($con->connect_error)
 	{
 		die($con->connect_error);
