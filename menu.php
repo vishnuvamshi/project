@@ -311,8 +311,8 @@ else
 
 
 <?php  
-	if(!(isset($_SESSION['user'])))
-	echo '<div align="center" id="logged"><a href="login.php"><button name="button" type="button" style="background-color: pink;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigout2g(this)" onmouseleave="bigsp2g(this)" onclick="alert("Please login to order Food")">Order</button></a></div>';
+// 	if(!(isset($_SESSION['user'])))
+// 	echo '<div align="center" id="logged"><a href="login.php"><button name="button" type="button" style="background-color: pink;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigout2g(this)" onmouseleave="bigsp2g(this)" onclick="alert("Please login to order Food")">Order</button></a></div>';
 	$s="remotemysql.com:3306";
 	$un="0Qc34rspqi";
 	$pw="dGdmOsAXAn";
@@ -374,6 +374,9 @@ else
 
 		}
 		echo '</table>';
+
+	if(!(isset($_SESSION['user'])))
+	echo '<div align="center" id="logged"><a href="login.php"><button name="button" type="button" style="background-color: pink;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigout2g(this)" onmouseleave="bigsp2g(this)" onclick="alert(\'Please login to order Food\')">Order</button></a></div>';
 		echo '<form action="menu.php" method="POST" enctype="multipart/form-data" style="font-size: 18px;font-weight: bold; ">
 		<div align="center" style="display:none" id="logg"><div align="center" style="min-width:60%;max-width:100%;width:70%;height: px; padding: 20px;border: 5px solid black;margin: 1px;border-radius: 77px;
 			overflow: auto;color: blue;font-size: 26px;background-color: lightgray;font-style: italic;">  
