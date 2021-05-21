@@ -112,9 +112,9 @@ echo '<div align="right" id="out" style="display:  ">
 		while($row123=mysqli_fetch_assoc($res123))
 		{
 			echo('<tr>
-				<td align="center">'.ucwords($row123["restaurant"]).'</td><td>'.$row123["food"].'</td><td>add</td>'); 
+				<td align="center">'.ucwords($row123["restaurant"]).'</td><td>'.$row123["food"].'</td><td>Waiting for conformation </td>'); 
 				echo '<td align="center">
-				<button type="submit" style="background-color: cyan	;font-color:#f90413 ;height: 30px;width: 120px;border-radius: 30px;font-size: 15px;text-align: center;display: " id="can" name="can" value="'.$row123["restaurant"].'" onclick="return cancelconfirm()">Cancel</button></td></tr>';
+				<button type="submit" style="background-color: cyan;font-color:#f90413 ;height: 30px;width: 120px;border-radius: 30px;font-size: 15px;text-align: center;display: " id="can" name="can" value="'.$row123["restaurant"].'" onclick="return cancelconfirm()">Cancel</button></td></tr>';
 		}echo '</table>';
 	}
 	else
