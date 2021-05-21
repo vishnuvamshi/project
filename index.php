@@ -12,8 +12,8 @@
 // 	echo "<script>alert('ordered created');</script>";
 $s="DROP TABLE customer,restaurant,items,ordered";
 if(mysqli_query( $con,$s))
-// 	echo "<script>alert('droped');</script>";
-//  echo "<script>alert('welcome');location.href='sqldatabase.php'</script>";
+	echo "<script>alert('droped');</script>";
+ echo "<script>alert('welcome');location.href='sqldatabase.php'</script>";
 //to create database tables
 //echo "<script>location.href='sqldatabase.php'</script>";
 	echo "<script>location.href='menu.php'</script>";
