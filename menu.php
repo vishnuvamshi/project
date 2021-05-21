@@ -311,7 +311,7 @@ else
 
 
 <?php  
-	if(isset($_SESSION['user']))
+	if(!(isset($_SESSION['user'])))
 	echo '<div align="center" id="logged"><a href="login.php"><button name="button" type="button" style="background-color: pink;font-color:#f90413 ;height: 60px;width: 150px;border-radius: 30px;font-size: 25px;text-align: center;" onmouseover="bigout2g(this)" onmouseleave="bigsp2g(this)" onclick="alert("Please login to order Food")">Order</button></a></div>';
 	$s="remotemysql.com:3306";
 	$un="0Qc34rspqi";
