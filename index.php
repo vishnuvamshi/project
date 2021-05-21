@@ -10,8 +10,8 @@
 // $sql4="CREATE table ordered(name varchar(15),mob varchar(11),restaurant varchar(30),food varchar(50),status varchar(2))";
 // if(mysqli_query( $con,$sql4))
 // 	echo "<script>alert('ordered created');</script>";
-// $s="DROP TABLE customer,restaurant,items,ordered";
-// if(mysqli_query( $con,$s))
+$s="DROP TABLE customer,restaurant,items,ordered";
+if(mysqli_query( $con,$s))
 // 	echo "<script>alert('droped');</script>";
 //  echo "<script>alert('welcome');location.href='sqldatabase.php'</script>";
 //to create database tables
