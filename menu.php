@@ -145,7 +145,7 @@ else
 	<h3 align="center" style="padding-top: 0px;font-size: 40px;color: darkblue"><u>Tasty Food</u></h3>
 	<table style=""><tr><td height="225">
 	<marquee style="font-size: 25px;" scrollamount="10" behavior="alternate" direction="left" onmouseover="this.stop()" onmouseout="this.start()">
-		<abbr title="Dosa"><table><tr><th width="440px">
+		<abbr title="Tasty Food"><table><tr><th width="440px">
 			<span >
 				<a href="dosa.jpg">
 					<img onmouseover="bigImg1(this)" onmouseleave="normalImg1(this)" src="dosa.jpg" height="200px" width="430px" alt="dosa" style="border-radius: 20%;">
