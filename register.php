@@ -92,7 +92,18 @@
 		if(!(na.test(nam)))
 			{alert("Please enter a valid Name without any spaces");return false;}
 		if(!(pa1.test(pa)))
-			{alert("Please do remember while creating your password\nPassword must contain atleast one digit\nPassword must contain atleast one specialcharacter\nPassword must contain atleast one lower case character\nPassword must contain atleast one upper case character\nPassword length must be in between 8 to 20 characters");return false;}
+		{
+                      if(pa.length<8)
+                      alert("Password must be atleast 8 characters");
+                      else if(pa.search(/[a-z]/i)<0)
+                      alert("Password must contain atleast one letter");
+                      else if(pa.search(/[0-9]/)<0)
+                      alert("Password must contain atleast one digit");
+                      else if(pa.search(/[!@#$%^&*]/)<0)
+                      alert("Password must contain atleast one special character");
+                      //alert("Please do remember while creating your password\nPassword must contain atleast one digit\nPassword must contain atleast one specialcharacter\nPassword must contain atleast one lower case character\nPassword must contain atleast one upper case character\nPassword length must be in between 8 to 20 characters");
+                      return false;
+                 }
 		if(!(ph.test(phone)))
 			{alert("Mobile number is wrong");return false;}
 		var add=document.getElementById('add').value;
