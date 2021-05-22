@@ -81,13 +81,26 @@
 		var phone=document.getElementById('mob').value;
 		var nam=document.getElementById('ln').value;
 		var pa=document.getElementById('password').value;
-		var pa1=/^[0-9]{0,10}\w{8,15}$/;
-		var na=/^[a-z]{1}[a-z]{1,20}$/;
+                var pa1=/^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,20}$/;
+		var na=/^[A-Za-z ]{2,20}$/;
 		var ph=/^[6-9]{1}[0-9]{9}$/;
 		if(!(na.test(nam)))
-			{alert("Name is wrong");return false;}
+			{alert("Please enter a valid name");return false;}
 		if(!(pa1.test(pa)))
-			{alert("Password length should be min 8 characters");return false;}
+		{
+                      if(pa.length<8)
+                      alert("Password must be atleast 8 characters");
+                      else if(pa.search(/[a-z]/)<0)
+                      alert("Password must contain atleast one lower case letter");
+                      else if(pa.search(/[A-Z]/)<0)
+                      alert("Password must contain atleast one upper case letter");
+                      else if(pa.search(/[0-9]/)<0)
+                      alert("Password must contain atleast one digit");
+                      else if(pa.search(/[!@#$%^&*]/)<0)
+                      alert("Password must contain atleast one special character");
+                      //alert("Please do remember while creating your password\nPassword must contain atleast one digit\nPassword must contain atleast one specialcharacter\nPassword must contain atleast one lower case character\nPassword must contain atleast one upper case character\nPassword length must be in between 8 to 20 characters");
+                      return false;
+                 }
 		if(!(ph.test(phone)))
 			{alert("Mobile number is wrong");return false;}
 	}
