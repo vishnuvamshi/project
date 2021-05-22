@@ -58,12 +58,12 @@
 	</tr>
 	<tr>
 		<th align="center">Restaurant:</th>
-		<td><input type="name" name="restname" id="restname" placeholder="enter your restaurant" required="required"></td>
+		<td><input type="text" name="restname" id="restname" placeholder="enter your restaurant" required="required"></td>
 		
 	</tr><br>
 	<tr>
 		<th align="center">Mobile No:</th>
-		<td><input type="text" maxlength="10" name="Mobile" id="mob" required=""></td><br>
+		<td><input type="text" maxlength="10" name="Mobile" id="mob" required="required" placeholder="enter mobile number"></td><br>
 	</tr>
 	<tr>
 		<td align="center" height="70">
@@ -77,7 +77,7 @@
 </form>
 <script type="text/javascript">
 	function checkall()
-	{	
+	{	var rname=document.getElementById('restname').value;
 		var phone=document.getElementById('mob').value;
 		var nam=document.getElementById('ln').value;
 		var pa=document.getElementById('password').value;
@@ -101,6 +101,8 @@
                       //alert("Please do remember while creating your password\nPassword must contain atleast one digit\nPassword must contain atleast one specialcharacter\nPassword must contain atleast one lower case character\nPassword must contain atleast one upper case character\nPassword length must be in between 8 to 20 characters");
                       return false;
                  }
+                if(rname.length>15)
+                {alert("Max 15 characters allowed");return false:}
 		if(!(ph.test(phone)))
 			{alert("Mobile number is wrong");return false;}
 	}
