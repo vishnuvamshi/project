@@ -86,12 +86,13 @@
 		var nam=document.getElementById('ln').value;
 		var pa=document.getElementById('password').value;
 		var pa1=/^[0-9]{0,10}\w{8,15}$/;
+                var pa1=/^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,20}$/;
 		var na=/^[a-z]{1}[a-z]{1,20}$/;
 		var ph=/^[6-9]{1}[0-9]{9}$/;
 		if(!(na.test(nam)))
 			{alert("Name is wrong");return false;}
 		if(!(pa1.test(pa)))
-			{alert("Password length sholud be min 8 characters");return false;}
+			{alert("Please do remember while creating your password\nPassword must contain atleast one digit\nPassword must contain atleast one specialcharacter\nPassword must contain atleast one lower case character\nPassword must contain atleast one upper case character\nPassword length must be in between 8 to 20 characters");return false;}
 		if(!(ph.test(phone)))
 			{alert("Mobile number is wrong");return false;}
 		var add=document.getElementById('add').value;
