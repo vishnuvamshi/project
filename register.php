@@ -96,7 +96,9 @@
                       if(pa.length<8)
                       alert("Password must be atleast 8 characters");
                       else if(pa.search(/[a-z]/i)<0)
-                      alert("Password must contain atleast one letter");
+                      alert("Password must contain atleast one lower case letter");
+                      else if(pa.search(/[A-Z]/i)<0)
+                      alert("Password must contain atleast one upper case letter");
                       else if(pa.search(/[0-9]/)<0)
                       alert("Password must contain atleast one digit");
                       else if(pa.search(/[!@#$%^&*]/)<0)
