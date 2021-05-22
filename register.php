@@ -90,7 +90,7 @@
 		var na=/^[A-Za-z ]{2,20}$/;
 		var ph=/^[6-9]{1}[0-9]{9}$/;
 		if(!(na.test(nam)))
-			{alert("Please enter a valid Name without any spaces");return false;}
+			{alert("Please enter a valid name");return false;}
 		if(!(pa1.test(pa)))
 		{
                       if(pa.length<8)
