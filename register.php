@@ -67,7 +67,7 @@
 	</tr><br>
 	<tr>
 		<th align="center">Mobile No:</th>
-		<td><input type="text" maxlength="10" name="Mobile" id="mob" required=""></td><br>
+		<td><input type="text" maxlength="10" name="Mobile" id="mob" required="required" placeholder="enter mobile number"></td><br>
 	</tr>
 	<tr>
 		<td align="center" height="70">
