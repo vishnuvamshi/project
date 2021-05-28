@@ -138,7 +138,7 @@
 	}
 	else{	$sql="INSERT INTO restaurant (name,pwd,rest,mob) VALUES ('$ln','$password','$restname','$mobile')";
 		if(mysqli_query($conn,$sql)){
-			echo ("<script>alert('Registration completed..Please login');location.href='login.php';</script>");
+			echo ("<script>alert('Registration completed..Please login');location.href='register1.php';</script>");
 		}
 		else
 		{	
