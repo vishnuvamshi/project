@@ -102,7 +102,7 @@
                       return false;
                  }
                 if(rname.length>15)
-                {alert("Max 15 characters allowed");return false:}
+                {alert("Max 15 characters allowed");return false;}
 	 	if(phone.length<10||phone.length>10)
 		{alert("Mobile number should have 10 digits only");return false;}
 		if(!(ph.test(phone)))
