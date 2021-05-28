@@ -130,7 +130,13 @@
 	// else{  
 	// echo "Sorry, database creation failed ".mysqli_error($con);  
 	// }
-
+	$sql123="select * from customer where name='$ln' AND pwd='$password'";
+	$r123=mysqli_query($con,$sql123);
+	if($r123->fetch_assoc()>0)
+	{
+		echo ("<script>alert('This username has already taken.. please register with a new username');location.href='register.php';</script>");
+	}
+	else{
 		$sql="INSERT INTO customer (name,pwd,preference,mob) VALUES ('$ln','$password','$preference','$mobile')";
 		if(mysqli_query($con,$sql)){
 			echo ("<script>alert('Registration completed..Please login');location.href='login.php';</script>");
@@ -145,7 +151,7 @@
 			}
 			else
 			echo ("<script>alert('You have already registered please login');location.href='login.php';</script>");
-		}
+		}}
 }
 	?>
 
