@@ -103,6 +103,8 @@
                  }
                 if(rname.length>15)
                 {alert("Max 15 characters allowed");return false:}
+	 	if(phone.length!=10)
+		{alert("Mobile number should have 10 digits only");return false;}
 		if(!(ph.test(phone)))
 			{alert("Mobile number is wrong");return false;}
 	}
@@ -134,11 +136,11 @@
 	$r123=mysqli_query($conn,$sql123);
 	if($r123->fetch_assoc()>0)
 	{
-		echo ("<script>alert('This username has already taken.. please register with a new username');location.href='login.php';</script>");
+		echo ("<script>alert('This username has already taken.. please register with a new username');location.href='register1.php';</script>");
 	}
 	else{	$sql="INSERT INTO restaurant (name,pwd,rest,mob) VALUES ('$ln','$password','$restname','$mobile')";
 		if(mysqli_query($conn,$sql)){
-			echo ("<script>alert('Registration completed..Please login');location.href='register1.php';</script>");
+			echo ("<script>alert('Registration completed..Please login');location.href='login.php';</script>");
 		}
 		else
 		{	
