@@ -130,8 +130,13 @@
 	// else{  
 	// echo "Sorry, database creation failed ".mysqli_error($con);  
 	// }
-
-		$sql="INSERT INTO restaurant (name,pwd,rest,mob) VALUES ('$ln','$password','$restname','$mobile')";
+	$sql123="select * from restaurant where name='$ln' AND pwd='$password'";
+	$r123=mysqli_query($conn,$sql123);
+	if($r123->fetch_assoc()>0)
+	{
+		echo ("<script>alert('This username has already taken.. please register with a new username');location.href='login.php';</script>");
+	}
+	else{	$sql="INSERT INTO restaurant (name,pwd,rest,mob) VALUES ('$ln','$password','$restname','$mobile')";
 		if(mysqli_query($conn,$sql)){
 			echo ("<script>alert('Registration completed..Please login');location.href='login.php';</script>");
 		}
@@ -153,6 +158,7 @@
 			else
 			echo ("<script>alert('You have already registered please login');location.href='login.php';</script>");}
 		}
+	    }
 }
 	?>
 
