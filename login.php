@@ -107,7 +107,7 @@
 			<tr>
 				<th colspan="3" align="center" style="color: darkblue;font-size: 60px;font-family: Segoe Script;">
 					
-					<b><u>Login</u></b>
+					<b>Login</b>
 				</th>
 			</tr>
 		<tr>
