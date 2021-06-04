@@ -142,7 +142,7 @@ else
 ?>	
 	
 <br><br>
-	<h3 align="center" style="padding-top: 0px;font-size: 40px;color: darkblue"><u>Tasty Food</u></h3>
+	<h3 align="center" style="padding-top: 0px;font-size: 40px;color: darkblue">Tasty Food</h3>
 	<table style=""><tr><td height="225">
 	<marquee style="font-size: 25px;" scrollamount="10" behavior="alternate" direction="left" onmouseover="this.stop()" onmouseout="this.start()">
 		<abbr title="Tasty Food"><table><tr><th width="440px">
@@ -190,7 +190,7 @@ else
 		</abbr></th></tr></table></marquee>
 	</td></tr></table>
 
-	<h3 align="center" style="padding-top: 0px;font-size: 35px;color: red;background: white"><u>Available Restaurants and Items</u></h3>
+	<h3 align="center" style="padding-top: 0px;font-size: 35px;color: red;background: white">Available Restaurants and Items</h3>
 <?php  
 
 	if(isset($_POST['button']))
@@ -326,8 +326,8 @@ else
 		die($con->connect_error);
 	}
 	echo '<table cellpadding="7" style="background-color: cyan;align-items: center;color:blue; font-family: times new roman; border-radius: 30px;font-size:23px;border: 5px solid black;display:;max-width:100%; min-width: 50%; width: 100%" border="0" id="infff">
-		<tr><th colspan="2" align="center" style="font-size:30px;color:  #99189f;background-color:gold; width:;border-radius:30px;"><u>Restaurant</u></th>
-		<th colspan="2" align="center" style="font-size:30px;color: #99189f;background-color:gold; width:;border-radius:30px;"><u>Available Items</u></th></tr>';
+		<tr><th colspan="2" align="center" style="font-size:30px;color:  #99189f;background-color:gold; width:;border-radius:30px;">Restaurant</th>
+		<th colspan="2" align="center" style="font-size:30px;color: #99189f;background-color:gold; width:;border-radius:30px;">Available Items</th></tr>';
 	$sql="select DISTINCT restaurant from items";
 	$res=$con->query($sql);
 		$rowsno=$res->num_rows;
@@ -385,7 +385,7 @@ else
 			overflow: auto;color: blue;font-size: 26px;background-color: lightgray;font-style: italic;">  
 		<table border="0" width="95%" cellpadding="7" cellspacing="1" align="center" title="Order" id="user" style="background-color: skyblue;align-items: center;color:blue; font-family: times new roman;max-width:100%; border-radius: 30px;font-size:23px;border: 2px solid black;">
 		<tr align="center" style="">
-			<th style="color: #99189f;font-size: 30px;background-color:yellow;border-radius:30px" colspan="3"><u>Select to Order</u></th>
+			<th style="color: #99189f;font-size: 30px;background-color:yellow;border-radius:30px" colspan="3">Select to Order</th>
 		</tr>
 		<tr >
 			';
