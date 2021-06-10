@@ -1,7 +1,7 @@
 <?php session_start();
 	if(!(isset($_SESSION["user"])))
 	{	session_destroy();header("location:menu.php");}
-         else if($_SESSION["rest"]=="c"){
+         else if($_SESSION["type"]=="customer"){
           header("location:menu.php");}
 ?>
 <!DOCTYPE html>
