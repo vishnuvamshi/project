@@ -3,6 +3,9 @@
 	{	session_destroy();
 		echo '<script>alert("Please login as restaurant to access this page");</script>';
 		header("location:menu.php");}
+        else if($_SESSION["type"]=="customer"){
+         echo '<script>alert("Please login as restaurant to access this page");</script>';
+          header("location:menu.php");}
 ?>
 <!DOCTYPE html>
 <html>
