@@ -1,6 +1,8 @@
 <?php session_start();
 	if(!(isset($_SESSION["user"])))
 	{	session_destroy();header("location:menu.php");}
+         else if($_SESSION["rest"]=="c"){
+          header("location:menu.php");}
 ?>
 <!DOCTYPE html>
 <html>
