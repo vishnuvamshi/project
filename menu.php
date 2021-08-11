@@ -88,9 +88,9 @@ echo '<div align="right" id="out" style="display:  ">
 		}
 		</script>';	
 	$s="remotemysql.com:3306";
-	$un="0Qc34rspqi";
-	$pw="dGdmOsAXAn";
-	$db="0Qc34rspqi";
+	$un="diDhuV3BtC";
+	$pw="b9YNjjRqOC";
+	$db="diDhuV3BtC";
 	$con=mysqli_connect($s,$un,$pw,$db);
 	if($con->connect_error)
 	{
@@ -197,9 +197,9 @@ else
 	{
 		echo('<script> this.style.background="ba5.jpg"</script>');
 	$s="remotemysql.com:3306";
-	$un="0Qc34rspqi";
-	$pw="dGdmOsAXAn";
-	$db="0Qc34rspqi";
+	$un="diDhuV3BtC";
+	$pw="b9YNjjRqOC";
+	$db="diDhuV3BtC";
 	$con=mysqli_connect($s,$un,$pw,$db);
 	if($con->connect_error)
 	{
@@ -297,9 +297,9 @@ else
 	{
 		echo('<script> this.style.background="ba5.jpg"</script>');
 	$s="remotemysql.com:3306";
-	$un="0Qc34rspqi";
-	$pw="dGdmOsAXAn";
-	$db="0Qc34rspqi";
+	$un="diDhuV3BtC";
+	$pw="b9YNjjRqOC";
+	$db="diDhuV3BtC";
 	$con=mysqli_connect($s,$un,$pw,$db);
 		if($con->connect_error)
 			die($con->connect_error);
@@ -317,9 +317,9 @@ else
 
 <?php  
 	$s="remotemysql.com:3306";
-	$un="0Qc34rspqi";
-	$pw="dGdmOsAXAn";
-	$db="0Qc34rspqi";
+	$un="diDhuV3BtC";
+	$pw="b9YNjjRqOC";
+	$db="diDhuV3BtC";
 	$con=mysqli_connect($s,$un,$pw,$db);
 	if($con->connect_error)
 	{
