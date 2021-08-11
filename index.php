@@ -3,15 +3,15 @@
 	$un="0Qc34rspqi";
 	$pw="dGdmOsAXAn";
 	$db="0Qc34rspqi";
-	$con=mysqli_connect($s,$un,$pw,$db);
-$s="select * from customer";
-$res=$con->query($s);
-		$rowsno=$res->num_rows;
-			while($row=$res->fetch_assoc())
-			{
-				echo $row['name'];
-				echo $row['pwd'];
-			}
+// 	$con=mysqli_connect($s,$un,$pw,$db);
+// $s="select * from customer";
+// $res=$con->query($s);
+// 		$rowsno=$res->num_rows;
+// 			while($row=$res->fetch_assoc())
+// 			{
+// 				echo $row['name'];
+// 				echo $row['pwd'];
+// 			}
 //$ss="drop table restaurant";
 //if(mysqli_query( $con,$ss))
 	//echo "<script>alert('restaurant droped');</script>";
