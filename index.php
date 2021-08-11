@@ -7,13 +7,11 @@
 $s="select * from customer";
 $res=$con->query($s);
 		$rowsno=$res->num_rows;
-		if($res->num_rows>0)
-		{
 			while($row=$res->fetch_assoc())
 			{
-				echo "name:".$row['name']."pass".$row['pwd'];
+				echo $row['name'];
+				echo $row['pwd'];
 			}
-		}
 //$ss="drop table restaurant";
 //if(mysqli_query( $con,$ss))
 	//echo "<script>alert('restaurant droped');</script>";
