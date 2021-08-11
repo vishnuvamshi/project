@@ -114,9 +114,9 @@
 	<?php
 	if($_SERVER["REQUEST_METHOD"]=="POST"){
 	$s="remotemysql.com:3306";
-	$un="0Qc34rspqi";
-	$pw="dGdmOsAXAn";
-	$db="0Qc34rspqi";
+	$un="diDhuV3BtC";
+	$pw="b9YNjjRqOC";
+	$db="diDhuV3BtC";
 	$con=mysqli_connect($s,$un,$pw,$db);
 	if(!$con)
 		die("error".mysqli_connect_error());
